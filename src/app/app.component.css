@@ -34,12 +34,15 @@ section {
   font-weight: bold;
 }
 
+.red {
+  color: red;
+  font-weight: bold;
+}
+
 .scroll-container {
   height: 300px;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  scroll-snap-align: center;
-  scroll-snap-type: y;
 }
 
 img {
@@ -90,5 +93,26 @@ button {
   h3,
   p {
     grid-column: 2;
+  }
+}
+
+.some-box {
+  width: 200px;
+  height: 200px;
+  background-color: skyblue;
+
+  &:hover {
+    background-color: coral;
+  }
+
+  /* NO BEM, because & doesn't get compiled down. It only references the parent */
+  &__child-box {
+    width: 80px;
+    height: 80px;
+    background-color: greenyellow;
+  }
+
+  span & {
+    background-color: plum;
   }
 }

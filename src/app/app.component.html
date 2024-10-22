@@ -4,7 +4,20 @@
   <section>
     <h2><code>&lt;dialog /&gt;</code></h2>
     <div class="green">Can I use: 95.04%</div>
-    <app-dialog />
+
+    <button (click)="dialog.showModal()">Open dialog</button>
+
+    <dialog #dialog>
+      <form>
+        <input type="text" placeholder="name" />
+        <input type="text" placeholder="email" />
+        <button formmethod="dialog">Submit</button>
+      </form>
+
+      <div>This is a dialog</div>
+
+      <button (click)="dialog.close()">close</button>
+    </dialog>
   </section>
 
   <section class="scroll-container">
@@ -88,57 +101,32 @@
   </section>
 
   <section>
-    <h2>Set.prototype.difference</h2>
+    <h2>New <code>Set</code> Methods</h2>
 
-    <div class="orange">Can I use: 82.19%</div>
-
-    <img
-      src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference/diagram.svg"
-    />
-
-    <code>
-      const odds = new Set([1, 3, 5, 7, 9]);
-      <br />
-      const squares = new Set([1, 4, 9]);
-      <br />
-      console.log(odds.difference(squares)); // Set(3) with 3, 5, 7
-    </code>
-  </section>
-
-  <section>
     <ul>
+      <li>
+        <code>A.difference(B)</code>
+        <div class="orange">Can I use: 82.19%</div>
+      </li>
+
       <li>
         <code>A.intersection(B)</code>
         <div class="orange">Can I use 82.19%</div>
-        <img
-          src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection/diagram.svg"
-        />
       </li>
 
       <li>
         <code>A.isDisjointFrom(B)</code>
         <div class="orange">Can I use 82.19%</div>
-        <img
-          src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection/diagram.svg"
-        />
       </li>
 
       <li>
         <code>A.isSubsetOf(B)</code>
         <div class="orange">Can I use 82.19%</div>
-        <img
-          src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf/diagram.svg"
-        />
       </li>
-    </ul>
 
-    <ul>
       <li>
         <code>A.isSupersetOf(B)</code>
         <div class="orange">Can I use 82.19%</div>
-        <img
-          src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf/diagram.svg"
-        />
       </li>
     </ul>
   </section>
@@ -148,45 +136,34 @@
   </section>
 
   <section>
-    <h2>Array.prototype.toSorded</h2>
+    <h2>New <code>Array</code> Methods</h2>
 
-    <div class="orange">Can I use: 89.27%</div>
-    <div class="blue">Baseline: Newly available</div>
-
-    <code>
-      const originalArray = [9, 8, 7, 6];
-      <br />
-      const sortedArray = originalArray.toSorted();
-      <br />
-      <br />
-      console.log(originalArray) // [9, 8, 7, 6]
-      <br />
-      console.log(sortedArray) // [6,7, 8, 9]
-      <br />
-      <br />
-      const sortedAgain = originalArray.sort();
-      <br />
-      <br />
-      console.log(originalArray) // [6, 7, 8, 9]
-      <br />
-      console.log(sortedAgain) // [6,7, 8, 9]
-    </code>
-  </section>
-
-  <section>
     <ul>
       <li>
-        <code>Array.prototype.toReversed</code>
-        <div class="green">Can I use: 89.27%</div>
+        <code>arr.toSorded()</code>
+        <div class="orange">Can I use: 89.27%</div>
         <div class="blue">Baseline: Newly available</div>
       </li>
-      <br />
+
       <li>
-        <code>Array.prototype.toSpliced</code>
-        <div class="green">Can I use: 89.27%</div>
+        <code>arr.toReversed()</code>
+        <div class="orange">Can I use: 89.27%</div>
+        <div class="blue">Baseline: Newly available</div>
+      </li>
+
+      <li>
+        <code>arr.toSpliced()</code>
+        <div class="orange">Can I use: 89.27%</div>
         <div class="blue">Baseline: Newly available</div>
       </li>
     </ul>
+  </section>
+
+  <section>
+    <h2><code>Object.groupBy(obj, callback)</code></h2>
+
+    <div class="orange">Can I use: 84.75% + 2.1% = 86.86%</div>
+    <div class="blue">Baseline: March 2024, Newly available</div>
   </section>
 
   <section>
@@ -265,5 +242,73 @@
         </p>
       </li>
     </ul>
+  </section>
+
+  <section>
+    <h2><code>crypto.randomUUID()</code></h2>
+
+    <div class="green">Can I use: 92.69%</div>
+    <div class="green">Baseline: July 2015 Widely available</div>
+  </section>
+
+  <section>
+    <h2><code>&lt;search&gt;</code></h2>
+
+    <div class="orange">Can I use: 85.3%</div>
+    <div class="orange">Baseline: October 2023 Newly available</div>
+
+    <i>
+      The &lt;search&gt; is a semantic container for the &lt;form&gt; that
+      submits the user-entered search query to a server.
+    </i>
+  </section>
+
+  <section>
+    <h2><code>CSS & nesting selector</code></h2>
+
+    <div class="orange">Can I use: 84.88% + 2.6% = 87.47%</div>
+    <div class="orange">Baseline: December 2023 Newly available</div>
+
+    <div class="some-box">
+      <div class="some-box__child-box"></div>
+    </div>
+
+    <span>
+      <div class="some-box">
+        <div class="some-box__child-box"></div>
+      </div>
+    </span>
+  </section>
+
+  <section>
+    <h2>TypeScript in <code>node</code></h2>
+
+    <div class="orange">node >= 22.6</div>
+
+    <pre>
+      <code>
+        node anyTypeScriptFile.ts --experimental-strip-types
+      </code>
+    </pre>
+  </section>
+
+  <section>
+    <h2>Pipeline Operator</h2>
+
+    <div class="red">Stage 2</div>
+
+    <pre>
+      <code>
+        const result = 'a' |> addB |> addC |> addD;
+        
+        console.log(result); // abcd
+      </code>
+    </pre>
+  </section>
+
+  <section>
+    <h2>Decorators</h2>
+
+    <div class="red">Stage 3</div>
   </section>
 </main>
