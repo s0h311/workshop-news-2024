@@ -1,4 +1,4 @@
-<h1>New in HTML, CSS & JS</h1>
+<h1>HTML, CSS & JavaScript News 2024</h1>
 
 <main>
   <section>
@@ -139,6 +139,130 @@
         <img
           src="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf/diagram.svg"
         />
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <img src="baseline.png" alt="Baseline" />
+  </section>
+
+  <section>
+    <h2>Array.prototype.toSorded</h2>
+
+    <div class="orange">Can I use: 89.27%</div>
+    <div class="blue">Baseline: Newly available</div>
+
+    <code>
+      const originalArray = [9, 8, 7, 6];
+      <br />
+      const sortedArray = originalArray.toSorted();
+      <br />
+      <br />
+      console.log(originalArray) // [9, 8, 7, 6]
+      <br />
+      console.log(sortedArray) // [6,7, 8, 9]
+      <br />
+      <br />
+      const sortedAgain = originalArray.sort();
+      <br />
+      <br />
+      console.log(originalArray) // [6, 7, 8, 9]
+      <br />
+      console.log(sortedAgain) // [6,7, 8, 9]
+    </code>
+  </section>
+
+  <section>
+    <ul>
+      <li>
+        <code>Array.prototype.toReversed</code>
+        <div class="green">Can I use: 89.27%</div>
+        <div class="blue">Baseline: Newly available</div>
+      </li>
+      <br />
+      <li>
+        <code>Array.prototype.toSpliced</code>
+        <div class="green">Can I use: 89.27%</div>
+        <div class="blue">Baseline: Newly available</div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Popover API</h2>
+
+    <div class="orange">Can I use: 74.72% + 11.09% = 85.81%</div>
+    <div class="orange">Baseline: Limited availability</div>
+
+    <div>Popover vs Dialog: Popovers are non-modal, Dialogs are modal</div>
+
+    <button popovertarget="my-popover">Open Popover</button>
+    <div popover id="my-popover">Greetings, one and all!</div>
+  </section>
+
+  <section>
+    <h2>CSS Anchor positioning</h2>
+
+    <div class="orange">Can I use: 66.29%</div>
+    <div class="orange">Baseline: Limited availability</div>
+
+    <div id="blue-box" class="blue-box"></div>
+    <div class="red-box" anchor="blue-box"></div>
+  </section>
+
+  <section fullsize>
+    <h2>Subgrid</h2>
+
+    <div class="orange">Can I use: 88.54%</div>
+    <div class="orange">Baseline: Newly available</div>
+
+    <ul class="card-list">
+      <li class="card">
+        <img src="dog1-brandon-day.jpg" />
+        <h3>Lorem ipsum</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit placeat
+          architecto eveniet praesentium dolores et sit dolore, excepturi fugiat
+          facere.
+        </p>
+      </li>
+
+      <li class="card">
+        <img src="dog2-alan-king.jpg" />
+        <h3>Omnis, veritatis odio.</h3>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste non
+          exercitationem aliquam eum nam repellendus.
+        </p>
+      </li>
+
+      <li class="card">
+        <img src="dog3-alvan-nee.jpg" />
+        <h3>Quibusdam, recusandae odio.</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
+          soluta? Quae obcaecati nulla doloremque, pariatur officia blanditiis!
+        </p>
+      </li>
+
+      <li class="card">
+        <img src="dog4-baptist-standaertsh.jpg" />
+        <h3>Exercitationem, libero quam!</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias,
+          beatae? Ipsa nostrum consectetur fugiat, impedit quam libero soluta
+          optio quae. Exercitationem suscipit debitis ipsa.
+        </p>
+      </li>
+
+      <li class="card">
+        <img src="dog5-ryan-walton.jpg" />
+        <h3>Modi, exer citat ionem dicta.</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ea!
+        </p>
       </li>
     </ul>
   </section>

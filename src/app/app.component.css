@@ -15,6 +15,10 @@ section {
   width: 50%;
 }
 
+[fullsize] {
+  width: 100%;
+}
+
 .green {
   color: green;
   font-weight: bold;
@@ -25,10 +29,66 @@ section {
   font-weight: bold;
 }
 
+.blue {
+  color: blue;
+  font-weight: bold;
+}
+
 .scroll-container {
   height: 300px;
   overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-snap-align: center;
   scroll-snap-type: y;
+}
+
+img {
+  width: 50dvw;
+}
+
+button {
+  width: fit-content;
+}
+
+.blue-box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+.red-box {
+  position: absolute;
+  top: anchor(bottom);
+  left: anchor(center);
+  width: 75px;
+  height: 75px;
+  background-color: red;
+}
+
+.card-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+  border: 1px solid black;
+  pad: 10px;
+
+  img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  h3,
+  p {
+    grid-column: 2;
+  }
 }
